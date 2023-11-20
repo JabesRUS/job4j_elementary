@@ -8,6 +8,16 @@ public class MathCalculator {
                 + multiply(first, second);
     }
 
+    public static double sumDiffAndDivis(double first, double second) {
+        return difference(first, second)
+                + division(first, second);
+    }
+
+    public static double sumAllMethod(double first, double second) {
+        return difference(first, second) + sum(first, second)
+                + division(first, second) + multiply(first, second);
+    }
+
     public static void main(String[] args) {
         System.out.println("Результат расчета равен: " + sumAndMultiply(10, 20));
 
