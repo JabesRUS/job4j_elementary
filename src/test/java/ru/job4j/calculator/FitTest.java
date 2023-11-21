@@ -16,9 +16,9 @@ class FitTest {
     }
 
     @Test
-    void when160WomanThat60() {
-        short in = 180;
-        double expected = 80.5;
+    void when160WomanThat57() {
+        short in = 160;
+        double expected = 57.49;
         double out = Fit.womanWeight(in);
         assertThat(expected).isEqualTo(out, withPrecision(0.01));
     }
