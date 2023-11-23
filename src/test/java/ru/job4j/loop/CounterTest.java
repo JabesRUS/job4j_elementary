@@ -20,7 +20,7 @@ class CounterTest {
     }
 
     @Test
-    void WhenSumEvenNumbersFiveToTwentyThenHundredFour() {
+    void WhenSumEvenNumbersFiveToTwentyThenOneHundredFour() {
         int start = 5;
         int finish = 20;
         int result = Counter.sumByEven(start, finish);
