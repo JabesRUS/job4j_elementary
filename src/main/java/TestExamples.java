@@ -1,14 +1,20 @@
 import java.util.Scanner;
 
 public class TestExamples {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        int num = 1;
-        long numUpper = num;
-        short numLower = (short) num;
-        System.out.println(numUpper);
-        System.out.println(numLower);
+    @SuppressWarnings("checkstyle:RightCurly")
+    public static String selectAction(int left, int right, int rsl) {
+        if (left + right == rsl) {
+            return "added";
+        } else if (left - right == rsl) {
+            return "subtracted";
+        } else if (left * right == rsl) {
+            return "multiplied";
+        } else if (left / right == rsl) {
+            return "divided";
+        } else {
+            return "none";
+        }
 
     }
 }
+
