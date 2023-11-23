@@ -20,11 +20,11 @@ class CounterTest {
     }
 
     @Test
-    void WhenSumEvenNumbers1To100Then2550() {
-        int start = 1;
-        int finish = 100;
+    void WhenSumEvenNumbersFiveToTwentyThenHundredFour() {
+        int start = 5;
+        int finish = 20;
         int result = Counter.sumByEven(start, finish);
-        int expected = 2550;
+        int expected = 104;
         assertThat(result).isEqualTo(expected);
     }
 }
