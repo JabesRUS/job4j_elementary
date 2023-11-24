@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 class FindLoopTest {
-
     @Test
     void whenArrayHas5Then0() {
         int[] data = new int[] {5, 10, 3};
