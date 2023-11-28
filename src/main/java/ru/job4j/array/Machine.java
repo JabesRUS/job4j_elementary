@@ -6,16 +6,14 @@ public class Machine {
         int[] coins = {10, 5, 2, 1};
         int[] rsl = new int[100];
         int size = 0;
-        int changeMoney = money - price;
+        money -= price;
         int i = 0;
-        int j = 0;
 
-        while (changeMoney > 0) {
-            if (coins[i] <= changeMoney) {
-                rsl[j] = coins[i];
-                changeMoney -= coins[i];
+        while (money > 0) {
+            if (coins[i] <= money) {
+                rsl[size] = coins[i];
+                money -= coins[i];
                 size++;
-                j++;
             } else {
                 i++;
             }
