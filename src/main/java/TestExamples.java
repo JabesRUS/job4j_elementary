@@ -1,18 +1,13 @@
 import java.util.Scanner;
 
 public class TestExamples {
-    @SuppressWarnings("checkstyle:RightCurly")
-    public static String selectAction(int left, int right, int rsl) {
-        if (left + right == rsl) {
-            return "added";
-        } else if (left - right == rsl) {
-            return "subtracted";
-        } else if (left * right == rsl) {
-            return "multiplied";
-        } else if (left / right == rsl) {
-            return "divided";
-        } else {
-            return "none";
+    public static void main(String[] args) {
+        int count = 0;
+        int[][] a = new int[2][2];
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                a[i][j] = count++;
+            }
         }
 
     }
