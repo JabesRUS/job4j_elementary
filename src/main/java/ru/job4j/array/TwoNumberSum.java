@@ -8,7 +8,6 @@ public class TwoNumberSum {
             if ((j < array.length) && (array[i] + array[j] == target)) {
                 return new int[] {i, j};
             }
-
             if (i != j) {
                 j--;
             } else {
