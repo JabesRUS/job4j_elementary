@@ -4,25 +4,20 @@ public class SimpleStringEncoder {
     public static String encode(String input) {
         String result = "";
         char symbol = input.charAt(0);
-        int counter = 0;
-        for (int i = 0; i < input.length(); i++) {
-            if (counter == 0) {
-                result += input.charAt(i);
+        int counter = 1;
+        for (int i = 0; i < input.length() - 1; i++) {
+            if (symbol == input.charAt(i + 1)) {
                 counter++;
-            } else if (input.charAt(i) == result.charAt(result.length() - 1)) {
-                counter++;
-            } else if (input.charAt(i) != result.charAt(result.length() - 1)) {
-                result += counter == 1 ? "" : counter;
+            } else {
+                result += symbol;
+                result += counter != 1 ? counter : "";
+                symbol = input.charAt(i + 1);
                 counter = 1;
-                result += input.charAt(i);
-            } else if (counter != 1 && i == input.length() - 1) {
-                result += counter;
             }
         }
+        result += symbol;
+        result += counter != 1 ? counter : "";
         return result;
     }
 
-    public static void main(String[] args) {
-        System.out.println(encode("qqwwwer"));
-    }
 }
