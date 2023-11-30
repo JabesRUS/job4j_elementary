@@ -15,6 +15,7 @@ public class SimpleStringEncoder {
                 counter = 1;
             }
         }
+
         result += symbol;
         result += counter != 1 ? counter : "";
         return result;
