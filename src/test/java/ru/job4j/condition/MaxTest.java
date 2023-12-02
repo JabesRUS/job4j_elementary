@@ -45,4 +45,50 @@ class MaxTest {
         assertThat(expected).isEqualTo(result);
 
     }
+
+    @Test
+    void whenMax5to5to6then6() {
+        int a = 5;
+        int b = 5;
+        int c = 6;
+        int result = Max.max(a, b, c);
+        int expected = 6;
+        assertThat(expected).isEqualTo(result);
+
+    }
+
+    @Test
+    void whenMaxMinus1to10to1then10() {
+        int a = -1;
+        int b = 10;
+        int c = 1;
+        int result = Max.max(a, b, c);
+        int expected = 10;
+        assertThat(expected).isEqualTo(result);
+
+    }
+
+    @Test
+    void whenMax1to2to3to4then4() {
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int d = 4;
+        int result = Max.max(a, b, c, d);
+        int expected = 4;
+        assertThat(expected).isEqualTo(result);
+
+    }
+
+    @Test
+    void whenMax0to0to0to0then0() {
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
+        int result = Max.max(a, b, c, d);
+        int expected = 0;
+        assertThat(expected).isEqualTo(result);
+
+    }
 }
